@@ -4,15 +4,14 @@ export default function Netflix() {
   return (
     <View style={styles.container}>
 
-      {/* CABEÇALHO */}
+
       <View style={styles.header}>
         <Text style={styles.logo}>N</Text>
       </View>
 
-      {/* CONTEÚDO DO FILME */}
       <View style={styles.conteudo}>
 
-        {/* CAPA DO FILME */}
+        
         <View style={styles.capa}>
           <Image
             source={{
@@ -22,7 +21,7 @@ export default function Netflix() {
           />
         </View>
 
-        {/* INFORMAÇÕES DO FILME */}
+    
         <View style={styles.informacoes}>
 
           <Text style={styles.titulo}>
@@ -37,7 +36,7 @@ export default function Netflix() {
             Comédia  •  Fantasia  •  Aventura
           </Text>
 
-          {/* RESUMO */}
+  
           <Text style={styles.tituloResumo}>
             Barbie
           </Text>
@@ -50,7 +49,7 @@ export default function Netflix() {
   em busca de respostas.
 </Text>
 
-          {/* INFORMAÇÕES EXTRAS */}
+      
           <Text style={styles.detalhes}>
             Direção: Greta Gerwig
           </Text>
@@ -63,7 +62,6 @@ export default function Netflix() {
             Classificação: 12 anos
           </Text>
 
-          {/* BOTÃO ASSISTIR */}
           <View style={styles.botaoAssistir}>
             <Text style={styles.textoBotao}>
               ▶  Assistir
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#141414",
   },
 
-  /* CABEÇALHO */
+  
 
   header: {
     paddingHorizontal: 16,
@@ -99,7 +97,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
 
-  /* CONTEÚDO */
+
 
   conteudo: {
     flexDirection: "row",
@@ -107,7 +105,7 @@ const styles = StyleSheet.create({
     gap: 30,
   },
 
-  /* CAPA */
+  
 
   capa: {
     width: 280,
@@ -121,7 +119,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
 
-  /* INFORMAÇÕES */
+  
 
   informacoes: {
     flex: 1,
@@ -147,7 +145,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
 
-  /* RESUMO */
+  
 
   tituloResumo: {
     color: "#fff",
@@ -163,7 +161,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
 
-  /* DETALHES */
+
 
   detalhes: {
     color: "#888",
@@ -171,7 +169,7 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
 
-  /* BOTÃO */
+  
 
   botaoAssistir: {
     backgroundColor: "#fff",

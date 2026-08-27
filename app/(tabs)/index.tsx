@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 
 const categorias = [
@@ -180,39 +181,41 @@ function renderCategoria({ item }: { item: any }) {
   return (
     <View style={styles.categoria}>
 
-      {/* NOME DO GÊNERO */}
+    
       <Text style={styles.tituloCategoria}>
         {item.titulo}
       </Text>
 
-      {/* FILMES DO GÊNERO */}
+    
       <FlatList
         data={item.filmes}
         horizontal
         keyExtractor={(filme) => filme.id}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item: filme }) => (
+        
+        <Link href={`/filme`} style={styles.tituloFilme}>
           <View
             style={[
               styles.card,
               { backgroundColor: filme.cor },
-            ]}
-          >
+            ]}>
 
-            {/* FOTO DO FILME */}
             <Image
               source={{ uri: filme.imagem }}
               style={styles.imagem}
             />
 
-            {/* NOME DO FILME */}
-            <View style={styles.nomeFilme}>
+        
+            /*<View style={styles.nomeFilme}>
               <Text style={styles.tituloFilme}>
                 {filme.titulo}
               </Text>
-            </View>
 
+            </View>
           </View>
+
+          </Link>
         )}
       />
     </View>
