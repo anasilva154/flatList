@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "app/componentes/DadosDosFilmes.tsx", "app/(tabs)/_layout.tsx"  ]
 }
