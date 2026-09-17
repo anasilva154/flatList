@@ -7,6 +7,13 @@ export default function DadosDosFilmes() {
       {
         id: "1a",
         titulo: "Oppenheimer",
+        ano: "2023",
+        duracao: "3h 0m",
+        classificacao: "16+",
+        sinopse: "Oppenheimer é um filme biográfico que narra a vida de J. Robert Oppenheimer, o físico teórico que liderou o Projeto Manhattan durante a Segunda Guerra Mundial, resultando na criação da primeira bomba atômica.",
+        elenco: "Cillian Murphy, Emily Blunt, Matt Damon",
+        nota: "8.5",
+        genero: "Drama  •  História  •  Biografia",
         cor: "#1a1a2e",
         imagem:
           "https://i.pinimg.com/736x/06/c8/70/06c87059cd71c7b46d8d5e25d8aab08b.jpg",
@@ -14,6 +21,13 @@ export default function DadosDosFilmes() {
       {
         id: "1b",
         titulo: "Duna 2",
+        ano: "2023",
+        duracao: "2h 35m",
+        classificacao: "14+",
+        sinopse: "Duna 2 é a continuação da épica saga de ficção científica baseada no romance de Frank Herbert, explorando a luta pelo controle do planeta desértico Arrakis e os conflitos entre as casas nobres.",
+        elenco: "Timothée Chalamet, Zendaya, Rebecca Ferguson",
+        nota: "8.7",
+        genero: "Ficção científica  •  Aventura  •  Drama",
         cor: "#16213e",
         imagem:
           "https://i.pinimg.com/736x/ec/53/e6/ec53e6a1733537aba98ef4198c1c1af0.jpg",
@@ -21,6 +35,13 @@ export default function DadosDosFilmes() {
       {
         id: "1c",
         titulo: "Barbie",
+        ano: "2023",
+        duracao: "1h 54m",
+        classificacao: "12+", 
+        sinopse: "Barbie vive uma vida perfeita na Barbieland, onde todos os dias são cheios de diversão. Porém, quando ela começa a enfrentar situações inesperadas, decide viajar para o mundo real em busca de respostas.",
+        elenco: "Margot Robbie, Ryan Gosling, America Ferrera",
+        nota: "8.9",
+        genero: "Comédia  •  Fantasia  •  Aventura",
         cor: "#0f3460",
         imagem:
           "https://i.pinimg.com/736x/e8/92/9b/e8929bfe52f769365b0b988df0944bc0.jpg",
@@ -28,6 +49,13 @@ export default function DadosDosFilmes() {
       {
         id: "1d",
         titulo: "Poor Things",
+        ano: "2023",
+        duracao: "2h 20m",
+        classificacao: "14+", 
+        sinopse: "Poor Things é um filme de drama e fantasia que segue a história de Bella Baxter, uma mulher ressuscitada por um excêntrico cientista, explorando temas de identidade, liberdade e amor em um mundo surreal.",
+        elenco: "Emma Stone, Mark Ruffalo, Willem Dafoe",
+        nota: "8.2",
+        genero: "Drama  •  Fantasia  •  Romance",
         cor: "#533483",
         imagem:
           "https://i.pinimg.com/736x/4a/83/72/4a8372dab16ffd2e96528e21a35fd7ed.jpg",
@@ -35,6 +63,13 @@ export default function DadosDosFilmes() {
       {
         id: "1e",
         titulo: "Saltburn",
+        ano: "2023",
+        duracao: "2h 10m",
+        classificacao: "16+",
+        sinopse: "Saltburn é um thriller psicológico que explora a vida de Oliver Quick, um jovem que se envolve com a família aristocrática de Felix Catton, levando a uma série de eventos inesperados e tensos.",
+        elenco: "Barry Keoghan, Jacob Elordi, Rosamund Pike",
+        nota: "7.8",
+        genero: "Thriller  •  Drama  •  Mistério",
         cor: "#2b2d42",
         imagem:
           "https://i.pinimg.com/736x/2d/41/e3/2d41e37be938c9390886092cf1410b17.jpg",

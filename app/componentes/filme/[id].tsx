@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams } from 'expo-router';
+import DadosDosFilmes from '../DadosDosFilmes';
  
  
 export interface FilmeProps {
@@ -25,7 +26,6 @@ export interface FilmeProps {
   imagem?: string;
 }
  
-// Dados de exemplo padrão (caso ainda não venham por props ou rota)
 const filmeExemploPadrao: FilmeProps = {
   id: '1c',
   titulo: 'Barbie',
@@ -43,49 +43,24 @@ const filmeExemploPadrao: FilmeProps = {
 };
  
  
-export default function Filme() {
-  const id= useLocalSearchParams();
- 
-console.log('ID recebido:', id);
- 
-const categorias = DadosDosFilmes();
-const filmesEncontrados = categorias
-  .flatMap((categoria) => categoria.filmes)
-  .find((f) => f.id === id);
-
-  console.log('Filme encontrado:', filmesEncontrados);
- 
- 
- 
-}
- 
 export default function Filme(props?: FilmeProps) {
-  // Pega parâmetros da navegação se houver, ou usa as props diretas, ou cai no exemplo padrão
   const params = useLocalSearchParams<Record<string, string>>();
   const {id}= useLocalSearchParams();
  
   console.log(id)
+
+  const categorias = DadosDosFilmes();
+const filmesEncontrados = categorias
+  .flatMap((categoria) => categoria.filmes)
+  .find((f) => f.id === id);
  
+ console.log('Filme encontrado:', filmesEncontrados);
  
- 
-  const filme: FilmeProps = {
-    id: props?.id || params.id || filmeExemploPadrao.id,
-    titulo: props?.titulo || params.titulo || filmeExemploPadrao.titulo,
-    subtitulo: props?.subtitulo || params.subtitulo || filmeExemploPadrao.subtitulo,
-    ano: props?.ano || params.ano || filmeExemploPadrao.ano,
-    duracao: props?.duracao || params.duracao || filmeExemploPadrao.duracao,
-    classificacao:
-      props?.classificacao || params.classificacao || filmeExemploPadrao.classificacao,
-    nota: props?.nota || params.nota || filmeExemploPadrao.nota,
-    genero: props?.genero || params.genero || filmeExemploPadrao.genero,
-    sinopse: props?.sinopse || params.sinopse || filmeExemploPadrao.sinopse,
-    elenco: props?.elenco || params.elenco || filmeExemploPadrao.elenco,
-    imagem: props?.imagem || params.imagem || filmeExemploPadrao.imagem,
-  };
+  const filme=filmesEncontrados;
  
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.scrollContent}>
-      {/* Banner / Poster do Filme */}
+      
       <View style={styles.posterContainer}>
         <Image
           source={{ uri: filme.imagem }}
@@ -95,14 +70,13 @@ export default function Filme(props?: FilmeProps) {
         <View style={styles.overlay} />
       </View>
  
-      {/* Detalhes Principais */}
-      <View style={styles.detalhesContainer}>
+        <View style={styles.detalhesContainer}>
         <Text style={styles.titulo}>{filme.titulo}</Text>
         {filme.subtitulo ? (
           <Text style={styles.subtitulo}>{filme.subtitulo}</Text>
         ) : null}
  
-        {/* Tags / Badges com Ano, Duração, Classificação e Nota */}
+       
         <View style={styles.tagsContainer}>
           <View style={styles.badge}>
             <Text style={styles.badgeTexto}>{filme.ano}</Text>
@@ -119,10 +93,10 @@ export default function Filme(props?: FilmeProps) {
           </View>
         </View>
  
-        {/* Gênero */}
+
         <Text style={styles.genero}>{filme.genero}</Text>
  
-        {/* Botões de Ação */}
+    
         <View style={styles.botoesContainer}>
           <TouchableOpacity style={styles.botaoAssistir} activeOpacity={0.8}>
             <Ionicons name="play" size={20} color="#000" />
@@ -135,13 +109,13 @@ export default function Filme(props?: FilmeProps) {
           </TouchableOpacity>
         </View>
  
-        {/* Seção Sinopse */}
+
         <View style={styles.secao}>
           <Text style={styles.secaoTitulo}>Sinopse</Text>
           <Text style={styles.secaoConteudo}>{filme.sinopse}</Text>
         </View>
  
-        {/* Seção Elenco */}
+
         <View style={styles.secao}>
           <Text style={styles.secaoTitulo}>Elenco Principal</Text>
           <Text style={styles.secaoConteudo}>{filme.elenco}</Text>
@@ -154,7 +128,7 @@ export default function Filme(props?: FilmeProps) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0F172A', // Fundo escuro moderno
+    backgroundColor: '#0F172A',
   },
   scrollContent: {
     paddingBottom: 40,

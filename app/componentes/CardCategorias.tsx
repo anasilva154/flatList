@@ -18,7 +18,7 @@ export default function renderCategoria({ item }: { item: any }) {
         showsHorizontalScrollIndicator={false}
         renderItem={({ item: filme }) => (
         
-        <Link href={`/filme`} style={styles.tituloFilme}>
+        <Link href={`/componentes/filme/${filme.id}`} style={styles.tituloFilme}>
           <View
             style={[
               styles.card,
