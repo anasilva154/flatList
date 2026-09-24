@@ -30,7 +30,7 @@ export default function InputBusca({
             onSearch(termo);
         } else {
             router.push({
-                pathname: "/components/busca/[query]",
+                pathname: "/componentes/busca/[query]",
                 params: { query: termo },
             } as any);
         }
